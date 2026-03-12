@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-orchestrator-templates"
+version = "0.1.0"
+description = "Pre-built orchestration patterns (parallel, sequential, supervisor-worker) for CrewAI, LangGraph, and n8n."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/multi-agent-orchestrator-templates"
+Issues = "https://github.com/erron-ai/multi-agent-orchestrator-templates/issues"
+
+[project.scripts]
+multi-agent-orchestrator-templates = "multi_agent_orchestrator_templates.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
